@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Team Head Joining Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Form kholne ke liye Modern Button -->
+    <a href="#" id="openFormBtn" class="link-btn">PR Team Head Joining Form</a>
+
+    <!-- Form Modal -->
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            
+            <div class="modal-header">
+                <h2>PR Team Head Application</h2>
+                <p>Official Verification & Joining Portal</p>
+                <small>For any official inquiries, contact: <a href="mailto:fixtheek@gmail.com">fixtheek@gmail.com</a></small>
+            </div>
+            
+            <!-- Data seedha fixtheek@gmail.com par bhejne ke liye -->
+            <form action="https://formsubmit.co/fixtheek@gmail.com" method="POST" enctype="multipart/form-data" class="custom-form">
+                
+                <!-- FormSubmit Settings -->
+                <input type="hidden" name="_subject" value="New PR Team Head Application Received!">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://formsubmit.co/thankyou.html">
+                <input type="hidden" name="_autoresponse" value="Namaste! Aapka PR Team Head application safaltapurvak mil gaya hai. Hamari team iski jaanch kar rahi hai aur jald hi aapse sampark karegi. - Fixtheek">
+                
+                <!-- Personal Details -->
+                <div class="form-section-title">Personal Information</div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address (For Confirmation) <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="father_name">Father's Name <span class="required">*</span></label>
+                        <input type="text" id="father_name" name="father_name" required placeholder="Enter father's name">
+                    </div>
+                    <div class="form-group half">
+                        <label for="mother_name">Mother's Name <span class="required">*</span></label>
+                        <input type="text" id="mother_name" name="mother_name" required placeholder="Enter mother's name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="mobile">Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required placeholder="10-digit mobile number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Residential Address <span class="required">*</span></label>
+                    <textarea id="address" name="address" rows="3" required placeholder="Enter your complete residential address"></textarea>
+                </div>
+
+                <!-- Identification Details -->
+                <div class="form-section-title">Identification & Documents</div>
+                
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="aadhar">Aadhaar Number <span class="required">*</span></label>
+                        <input type="text" id="aadhar" name="aadhar" maxlength="12" required placeholder="12-digit Aadhaar number">
+                    </div>
+                    <div class="form-group half">
+                        <label for="college_id">College ID / Enrollment No <span class="required">*</span></label>
+                        <input type="text" id="college_id" name="college_id" required placeholder="Enter college ID number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="govt_id_type">Govt. ID Type & Number <span class="required">*</span></label>
+                    <input type="text" id="govt_id_type" name="govt_id_type" required placeholder="e.g., PAN - ABCDE1234F">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="govt_id_photo">Govt. ID Photo (Upload) <span class="required">*</span></label>
+                        <input type="file" id="govt_id_photo" name="govt_id_photo" accept="image/*,application/pdf" required class="file-input">
+                    </div>
+                    <div class="form-group half">
+                        <label for="college_id_photo">College ID Photo (Upload) <span class="required">*</span></label>
+                        <input type="file" id="college_id_photo" name="college_id_photo" accept="image/*,application/pdf" required class="file-input">
+                    </div>
+                </div>
+
+                <!-- Digital Signature Section -->
+                <div class="form-section-title">Digital Signature</div>
+                <div class="form-group">
+                    <label>Sign inside the box below <span class="required">*</span></label>
+                    <div class="signature-pad-container">
+                        <canvas id="signatureCanvas" width="450" height="150"></canvas>
+                        <div class="sig-actions">
+                            <button type="button" id="clearSig" class="secondary-btn">Clear Signature</button>
+                        </div>
+                    </div>
+                    <input type="hidden" id="signatureData" name="signatureData" required>
+                </div>
+
+                <!-- Legal Terms & Conditions Box -->
+                <div class="form-section-title">Terms & Legal Agreement</div>
+                <div class="form-group legal-box">
+                    <h3>Legal Terms, Conditions & Company Rights</h3>
+                    <div class="terms-text">
+                        <p>1. <strong>Data Security & Confidentiality:</strong> Leaking or sharing any company data, client information, or internal strategies with unauthorized parties is strictly illegal.</p>
+                        <p>2. <strong>Discipline & Consistency:</strong> Maintaining absolute consistency and workplace discipline is mandatory. Immediate action will be taken for negligence or rule violations.</p>
+                        <p>3. <strong>Company Reputation & Restrictions:</strong> Making defamatory statements, mocking the company, or spreading damaging remarks on public platforms is strictly prohibited.</p>
+                        <p>4. <strong>All Rights Reserved:</strong> All intellectual properties, operational rights, and administrative authorities regarding this application and employment agreement remain exclusively with the company.</p>
+                        <p>5. <strong>Legal Action & Termination:</strong> Any breach of the terms mentioned above will result in immediate termination of employment without prior notice, alongside strict legal action pursued by the company.</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                        <label for="agreeTerms">I have carefully read and fully agree to all the Legal Terms & Conditions and Company Rights stated above.</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
