@@ -203,44 +203,6 @@ body {
     line-height: 1.4;
 }
 
-.signature-pad-container {
-    border: 1px solid #cbd5e1;
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-    display: inline-block;
-}
-
-#signatureCanvas {
-    display: block;
-    cursor: crosshair;
-    background-color: #fff;
-    width: 100%;
-    max-width: 450px;
-}
-
-.sig-actions {
-    padding: 6px 10px;
-    background: #f1f5f9;
-    border-top: 1px solid #e2e8f0;
-    text-align: right;
-}
-
-.secondary-btn {
-    padding: 5px 12px;
-    background-color: #64748b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.secondary-btn:hover {
-    background-color: #475569;
-}
-
 .submit-btn {
     width: 100%;
     padding: 14px;
